@@ -1,0 +1,240 @@
+-- phpMyAdmin SQL Dump
+-- version 3.2.0.1
+-- http://www.phpmyadmin.net
+--
+-- Servidor: localhost
+-- Tiempo de generación: 07-05-2014 a las 20:08:03
+-- Versión del servidor: 5.1.37
+-- Versión de PHP: 5.3.0
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+--
+-- Base de datos: `correos_masivos`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `msge_categoria_mail`
+--
+
+CREATE TABLE IF NOT EXISTS `msge_categoria_mail` (
+  `id_msge_categoria_mail` int(11) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `descripcion` text NOT NULL,
+  `estatus` varchar(15) NOT NULL,
+  `fecha_creacion` datetime NOT NULL,
+  `modifcado_por` int(11) NOT NULL,
+  `fecha_modificacion` datetime NOT NULL,
+  `creado_por` int(11) NOT NULL,
+  PRIMARY KEY (`id_msge_categoria_mail`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Volcar la base de datos para la tabla `msge_categoria_mail`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `msge_contacto`
+--
+
+CREATE TABLE IF NOT EXISTS `msge_contacto` (
+  `id_msge_contacto` int(11) NOT NULL,
+  `nombre` varchar(45) NOT NULL,
+  `apellido_paterno` varchar(45) NOT NULL,
+  `apellido_materno` varchar(45) NOT NULL,
+  `fecha_nacimiento` varchar(30) NOT NULL,
+  `sexo` varchar(20) NOT NULL,
+  `correo` varchar(45) NOT NULL,
+  `estado_civil` varchar(45) NOT NULL,
+  `id_msge_usuario` int(11) NOT NULL,
+  `tipo` varchar(45) NOT NULL,
+  PRIMARY KEY (`id_msge_contacto`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Volcar la base de datos para la tabla `msge_contacto`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `msge_cuenta_mail`
+--
+
+CREATE TABLE IF NOT EXISTS `msge_cuenta_mail` (
+  `id_msge_cuenta_mail` int(11) NOT NULL,
+  `id_msge_contacto` int(11) NOT NULL,
+  `mail` varchar(500) NOT NULL,
+  `recibe_mail` tinyint(4) NOT NULL,
+  `estatus_mail` varchar(20) NOT NULL,
+  PRIMARY KEY (`id_msge_cuenta_mail`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Volcar la base de datos para la tabla `msge_cuenta_mail`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `msge_mail`
+--
+
+CREATE TABLE IF NOT EXISTS `msge_mail` (
+  `id_msge_mail` int(11) NOT NULL,
+  `encabezado` text NOT NULL,
+  `asunto` varchar(1000) NOT NULL,
+  `mensaje` text NOT NULL,
+  `fecha_envio` datetime NOT NULL,
+  `estatus_mail` varchar(20) NOT NULL,
+  `compartido` int(11) NOT NULL,
+  `estatus` varchar(15) NOT NULL,
+  `fecha_creacion` datetime NOT NULL,
+  `creado_por` int(11) NOT NULL,
+  `fecha_modificacion` datetime NOT NULL,
+  `modificado_por` int(11) NOT NULL,
+  `id_msge_categoria_mail` int(11) NOT NULL,
+  `id_msge_tipo_mail` int(11) NOT NULL,
+  PRIMARY KEY (`id_msge_mail`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Volcar la base de datos para la tabla `msge_mail`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `msge_mail_plantilla`
+--
+
+CREATE TABLE IF NOT EXISTS `msge_mail_plantilla` (
+  `id_msge_mail_plantilla` int(11) NOT NULL,
+  `id_msge_mail` int(11) NOT NULL,
+  `encabezado` text NOT NULL,
+  `asunto` varchar(1000) NOT NULL,
+  `mensaje` text NOT NULL,
+  `estatus_mail` varchar(20) NOT NULL,
+  `compartido` int(11) NOT NULL,
+  `estutus` varchar(15) NOT NULL,
+  `fecha_creacion` datetime NOT NULL,
+  `creado_por` int(11) NOT NULL,
+  `fecha_modificacion` datetime NOT NULL,
+  `modificado_por` int(11) NOT NULL,
+  `id_msge_categoria_mail` int(11) NOT NULL,
+  PRIMARY KEY (`id_msge_mail_plantilla`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Volcar la base de datos para la tabla `msge_mail_plantilla`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `msge_mail_user`
+--
+
+CREATE TABLE IF NOT EXISTS `msge_mail_user` (
+  `id_msge_mail_user` int(11) NOT NULL,
+  `id_msge_mail` int(11) NOT NULL,
+  `id_msge_tipo` int(11) NOT NULL,
+  `id_remitente` int(11) NOT NULL,
+  `fecha_envio` datetime NOT NULL,
+  `fecha_revision` datetime NOT NULL,
+  `estatus_mail` varchar(40) NOT NULL,
+  `uri` text NOT NULL,
+  `sessionid` varchar(500) NOT NULL,
+  PRIMARY KEY (`id_msge_mail_user`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Volcar la base de datos para la tabla `msge_mail_user`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `msge_tipo_envio`
+--
+
+CREATE TABLE IF NOT EXISTS `msge_tipo_envio` (
+  `id_msge_tipo_envio` int(11) NOT NULL,
+  `nombre` varchar(45) NOT NULL,
+  `descripcion` varchar(45) NOT NULL,
+  `estatus` varchar(15) NOT NULL,
+  `creado_por` int(11) NOT NULL,
+  `fecha_creacion` datetime NOT NULL,
+  `modificado_por` int(11) NOT NULL,
+  `fecha_modificacion` datetime NOT NULL,
+  PRIMARY KEY (`id_msge_tipo_envio`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Volcar la base de datos para la tabla `msge_tipo_envio`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `msge_tipo_mail`
+--
+
+CREATE TABLE IF NOT EXISTS `msge_tipo_mail` (
+  `id_msge_tipo_mail` int(11) NOT NULL,
+  `nombre` varchar(100) NOT NULL,
+  `descripcion` text NOT NULL,
+  `tipo` varchar(15) NOT NULL,
+  `fecha_creacion` datetime NOT NULL,
+  `creado_por` int(11) NOT NULL,
+  `fecha_modificacion` datetime NOT NULL,
+  `modificado_por` int(11) NOT NULL,
+  `estatus` varchar(15) NOT NULL,
+  PRIMARY KEY (`id_msge_tipo_mail`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Volcar la base de datos para la tabla `msge_tipo_mail`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `msge_usuario`
+--
+
+CREATE TABLE IF NOT EXISTS `msge_usuario` (
+  `id_msge_usuario` int(11) NOT NULL,
+  `id_msge_mail_user` int(11) NOT NULL,
+  `usuario` varchar(45) NOT NULL,
+  `contrasena` varchar(45) NOT NULL,
+  `clave` varchar(10) NOT NULL,
+  PRIMARY KEY (`id_msge_usuario`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Volcar la base de datos para la tabla `msge_usuario`
+--
+
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
