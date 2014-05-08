@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" conteneur="width=device-width">
+<meta name="viewport" conteneur="initial-scale=1.0">
+<style type="text/css">
+body [Yahoo] .ExternalClass {
+	width:100%;
+}
+body [Yahoo] table td {
+	border-collapse:collapse;
+}
+body [Yahoo] {
+	width: 100%;
+	background-color: #FFFFFF;
+	margin:0;
+	padding:0;
+}
+@media only screen and (max-width: 640px) {
+body {
+width:auto!important;
+}
+body .conteneur {
+width:440px !important;
+ margin:0 auto !important;
+ text-align:center !important;
+}
+body .contenu {
+width:371px !important;
+ margin:0 auto !important;
+ text-align:center !important;
+}
+body .contenu2 {
+width:370px !important;
+ margin:0 auto !important;
+ text-align:center !important;
+}
+
+body .contenu3 {
+width:300px !important;
+ margin:0 auto !important;
+ text-align:center !important;
+}
+body .img1 img{
+ width:360px!important;
+ margin:0 auto !important;
+ text-align:center !important;
+}
+body .padding-bottom-head {
+ padding-bottom:5px!important;
+}
+body .padding-bottom {
+ padding-bottom:15px!important;
+}
+body .center {
+text-align:center!important;
+}
+body img {
+ max-width:400px!important;
+ height:auto!important;
+}
+body .btn img{
+ width:116px!important;
+ height:auto!important;
+}
+body .none {
+ display:none!important;
+}
+}
+ @media only screen and (max-width: 479px) {
+body {
+width:auto!important;
+}
+body .conteneur {
+ width:337px!important;
+ margin:0 auto !important;
+ text-align:center !important;
+}
+body .contenu {
+ width:300px!important;
+ margin:0 auto !important;
+ text-align:center !important;
+}
+body .contenu-titre {
+ width:280px!important;
+ margin:0 auto !important;
+ text-align:center !important;
+}
+body .contenu2 {
+ width:280px!important;
+ margin:0 auto !important;
+ text-align:center !important;
+}
+body .contenu3 {
+ width:270px!important;
+ margin:0 auto !important;
+ text-align:center !important;
+}
+body td.img1 img {
+ max-width:337px!important;
+ margin:0 auto !important;
+ text-align:center !important;
+}
+body td.petit img {
+max-width:260px!important;
+height:auto!important;
+}
+body img {
+ max-width:300px!important;
+ height:auto!important;
+}
+body .btn img{
+ width:116px!important;
+ height:auto!important;
+}
+body .center {
+text-align:center!important;
+}
+body .padding0 {
+ padding:0!important;
+}
+body .padding-bottom-head {
+ padding-bottom:5px!important;
+}
+body .padding-bottom {
+ padding-bottom:15px!important;
+}
+body .none {
+ display:none!important;
+}
+}
+</style>
+</head>
+
+<body style="margin:0; padding:0">
+
+      <table class="conteneur" width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td valign="top" bgcolor="#994749">
+          
+            <table class="conteneur" align="center" border="0" cellpadding="0" cellspacing="0" width="800">
+							<tr>
+                <td align="center" class="img1"><img src="images/image_01.jpg" width="800" height="322" /></td>
+              </tr>
+            </table>
+            
+            <table class="conteneur" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+            	<tr>
+                <td align="center" valign="top" bgcolor="#FFFFFF" style="padding:40px 0">
+                	<table class="contenu" width="560" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td align="center"><div><font face=Georgia color=#397D85 style="font-size:37px"><em>Lorem Ipsum</em></font></div></td>
+                    </tr>
+                    <tr>
+                      <td style="padding:10px 0"><img src="images/image_04.jpg" width="546" height="17" /></td>
+                    </tr>
+                    <tr>
+                      <td align="left" style="line-height:20px"><div><font face=Arial color=#575756 size=2><strong>Lorem ipsum dolor sit amet</strong>, consectetur adipisicing elit, sed do eiusmod   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim   veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea   commodo consequat. Duis aute irure dolor in reprehenderit in voluptate   velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint   occaecat cupidatat non proident, sunt in culpa qui officia deserunt <a href="" style="color:#A35A5A"><font face=Arial color=#A35A5A size=2>mollit anim id est laborum</font></a> </font></div></td>
+                    </tr>
+                    <tr>
+                      <td align="center" style="padding:38px 0 20px 0"><img src="images/image_08.jpg" width="217" height="57" /></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+            
+           	<table class="conteneur" align="center" border="0" cellpadding="0" cellspacing="0" width="800">
+							<tr>
+              	<td class="none"><img src="images/image_11.jpg" width="320" height="262" /></td>
+                <td class="padding-bottom" width="160" align="center" valign="top" bgcolor="#D8D3CF">
+                	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td width="100%" class="none"><img src="images/image_12.jpg" width="157" height="30" /></td>
+                    </tr>
+                    <tr>
+                      <td width="100%" align="center" style="padding:10px 0"><img src="images/image_15.jpg" width="157" height="47" /></td>
+                    </tr>
+                    <tr>
+                      <td width="100%" align="center" style="padding:10px 0 20px 0"><img src="images/image_15.jpg" width="157" height="47" /></td>
+                    </tr>
+                  </table>
+                  <table width="120" border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td><img src="images/image_20.jpg" width="40" height="33" /></td>
+                      <td><img src="images/image_21.jpg" width="40" height="33" /></td>
+                      <td><img src="images/image_22.jpg" width="40" height="33" /></td>
+                    </tr>
+                  </table>
+                </td>
+                <td class="none"><img src="images/image_13.jpg" width="323" height="262" /></td>
+              </tr>
+            </table>
+            
+          </td>
+        </tr>
+      </table>
+      
+</body>
+</html>
