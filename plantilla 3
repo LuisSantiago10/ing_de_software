@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Template Saint-Valentin</title>
+<style>
+body {
+margin:0;
+font-family:Arial, Helvetica, sans-serif;
+padding:0;
+width:100%;
+background-color:#333;
+}
+h1 {
+	 margin:0;
+      font-size:1.5em;
+      color:#666;
+	  padding: 25px 0 5px 0;
+             
+}
+a:link, a:focus {
+                text-decoration:none;
+}
+@media only screen and (max-width: 640px) {
+body {
+width:auto!important;
+}
+.conteneur {
+width:440px !important;
+margin:0 auto !important;
+text-align:center !important;
+}
+img {
+max-width:440px!important;
+height:auto!important;
+}
+.padding-bottom {
+padding-bottom:20px!important;
+}
+.center {
+text-align:center!important;
+}
+.none {
+display:none!important;
+}
+.bt {
+padding:0 20px 0 0!important;
+}
+.padding {
+	padding:20px!important;
+}
+}
+@media only screen and (max-width: 479px) {
+body {
+width:auto!important;
+}
+.conteneur {
+width:280px!important;
+margin:0 auto !important;
+text-align:center !important;
+}
+img {
+max-width:280px!important;
+height:auto!important;
+}
+.center {
+text-align:center!important;
+}
+.padding0 {
+padding:0!important;
+}
+.padding-bottom {
+padding-bottom:20px!important;
+}
+.padding {
+	padding:20px!important;
+}
+.none {
+display:none!important;
+}
+.bt {
+padding:0 20px 0 0!important;
+}
+}
+</style>
+</head>
+
+<body>
+<table class="conteneur"width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>
+    <table class="conteneur" align="center" width="600" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td bgcolor="#d7d7d7">
+    <table class="conteneur"align="center" width="600" height="70" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center" bgcolor="#e81f70"><img src="images/stval_02.gif" width="211" height="72" /></td>
+  </tr>
+</table>
+<table class="conteneur" width="600" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center"><img src="images/stval_06.png" width="597" height="391" /></td>
+  </tr>
+</table>
+<table class="conteneur" width="600" border="0" cellspacing="0" cellpadding="0" >
+  <tr>
+    <td align="center" style="padding:20px 0;"><img src="images/stval_10.png" width="267" height="70" /></td>
+  </tr>
+</table>
+<table class="conteneur" bgcolor="#f1eeee" width="100%" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td>
+<table class="conteneur" align="center" width="500" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="padding:20px 0;" bgcolor="#f1eeee">
+    <table class="conteneur" align="left" width="206" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td align="center"><img src="images/stval_14.png" width="206" height="201" /></td>
+  </tr>
+</table>
+<table class="conteneur" align="right" width="250" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td>
+    <table class="conteneur center padding" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+    <td align="justify" class="center" style="padding:0 0 30px 0; color:#999;"><div style="text-align:justify">
+    <h1>Lorem ipsum</h1> 
+
+Dolor sit amet, consectetur adipiscing
+elit. Suspendisse nec <a href="#" style="color:#e81f70;font-style:italic;">lacus</a> nibh.
+Ut eros elit, auctor .</div></td>
+</tr>
+</table>
+<table class="bt" align="right" width="120"  border="0" cellspacing="0" cellpadding="0" style="padding:0 0 20px 0;" >
+  <tr>
+                      <td bgcolor="#e81f70" style="-webkit-border-radius: 5px;border-radius: 5px;padding:10px 0;">
+                        <table align="center" width="100" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td align="center" ><font size="2" color="#FFF" face="Arial, Helvetica, sans-serif"><a href="#" style="text-decoration:none; color:#FFF; font-weight:bold;">LOREM IPSUM</a></font>&nbsp;</td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+            </table>
+
+
+    </td>
+  </tr>
+</table>
+
+    </td>
+  </tr>
+</table>
+</td>
+</tr>
+</table>
+<table class="conteneur" width="600" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style="text-align:center;color:#e81f70;padding:30px 0;">Lorem ipsum</td>
+  </tr>
+</table>
+
+</td>
+  </tr>
+</table>
+
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
