@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario Contacto - HTML5, CSS3, JAVASCRIPT Y PHP - Tutosytips</title>
+
+	<link rel="stylesheet" href="estilos.css" />
+	
+	<script type="text/javascript" src="js/form.js"></script>
+	
+	<!--[if lt IE 9]>
+	    	<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+	    	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+<form action="iniciosesion.html" >
+		<input class="form-btn" type="submit" value="INICIAR SESION" />
+		</form>
+	<section>
+		<h2 style="color:#FFF">ENVIO DE CORREOS MASIVOS</h2>
+		<h2 style="color:#FFF">REGISTRO DE DATOS</h2>
+		<form action="" class="contact-form" onsubmit="return validar(this);" method="post">				
+			<div class="formulario">
+				<div class="column">
+					<label for="nombre">Nombre </label>
+					<input type="text" name="nombre" class="form-input" onBlur="revisar(this);"/>
+					<label for="email">Email </label>
+					<input type="email" name="email" class="form-input" onblur="revisar(this); revisaremail(this);"/>
+					
+					<label for="contrasena">Contraseña </label>
+					<input type="password" name="contrasena" class="form-input" onblur="revisar(this);"/>
+				</div>
+				
+				<input class="form-btn" type="submit" value="REGISTARSE" />
+				</div>		
+		</form>
+		
+	</section>
+	
+</body>
+</html>
