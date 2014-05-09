@@ -29,7 +29,7 @@ section {
 	width: 320px;
 	background: #ededed;
 	border: 5px solid #dbdbdb;
-	color: #999;
+	color: #9999;
 	position: static;
 	alignment-adjust:central;
 }
