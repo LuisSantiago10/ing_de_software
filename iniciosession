@@ -1,0 +1,86 @@
+CTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Formulario Contacto - HTML5, CSS3, JAVASCRIPT Y PHP - Tutosytips</title>
+
+	<link rel="stylesheet" href="estilos.css" />
+	
+	<script type="text/javascript" src="js/form.js"></script>
+	
+	<!--[if lt IE 9]>
+	    	<script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+	    	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body>
+<form action="index.html" >
+		<input class="form-btn" type="submit" value="REGISTRO" />
+		</form>
+	<section>
+		<h2 style="color:#FFF">ENVIO DE CORREOS MASIVOS</h2>
+		<h2 style="color:#FFF">INICIAR SESSION</h2>
+		<form action="" class="contact-form" onsubmit="return validar(this);">				
+			<div class="formulario">
+				<div class="column">
+				
+					<label for="email">Email </label>
+					<input type="email" name="email" class="form-input" onblur="revisar(this); revisaremail(this);"/>
+					
+					<label for="asunto">Contraseña </label>
+					<input type="password" name="asunto" class="form-input" onblur="revisar(this);"/>
+				</div>
+				
+				<input class="form-btn" type="submit" value="INICIAR SESSION" />
+				</div>		
+		</form>
+		
+	</section>
+	
+</body>
+</html>
+
+
+<?php
+2	 
+3	 $host_db = "localhost";
+4	 $user_db = "root";
+5	 $pass_db = " ";
+6	  
+7	 $conexion = mysql_connect($host_db, $user_db, $pass_db);
+8	 
+9	 mysql_select_db(cargarexcel, $conexion) or die("No se puede seleccionar la base de datos.");;
+10	 
+11	 $buscarUsuario = "SELECT * FROM usuario WHERE email = '$_POST[email]' ";
+12	 
+13	 $result = mysql_query($buscarUsuario);
+14	 
+15	 $count = mysql_num_rows($result);
+16	  
+17	 if ($count == 1){
+18	 echo "<br />". "El Nombre de Usuario ya Existe en nuestra Base de Datos!" . "<br />";
+19	  
+20	echo "<a href='registro.html'>Escoger otro Nombre de Usuario</a>";
+21	  
+22	exit;
+23	 }
+24	 else{
+25	 
+26	 $query = "INSERT INTO usuario (nombre,correo,contrasena) VALUES ('$_POST[nombre]', '$_POST[password]')";
+27	 
+28	 if (!mysql_query($query, $conexion))
+29	 {
+30	 die('Error: ' . mysql_error());
+31	 echo "Error al crear el usuario." . "<br />";
+32	 }
+33	 
+34	 else{
+35	 echo "<br />" . "<h2>" . "Usuario Creado Exitosamente!" . "</h2>";
+36	 echo "<h4>" . "Bienvenido: " . $_POST['nombre'] . "</h4>";
+37	 }
+38	 
+39	 }
+40	 
+41	 mysql_close($conexion)
+42	 
+43	?>
