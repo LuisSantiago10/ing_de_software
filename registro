@@ -1,0 +1,56 @@
+<?php
+	 
+	 $host_db = "localhost";
+	 $user_db = "root";
+	 $contrasena = md5($_POST[contrasena]);
+	  
+	 $conexion = mysql_connect($host_db, $user_db);
+	 
+	 mysql_select_db(cargarexcel, $conexion) or die("No se puede seleccionar la base de datos.");;
+	 
+	 $buscarUsuario = "SELECT * FROM usuario WHERE correo = '$_POST[email]' ";
+	 
+	 $result = mysql_query($buscarUsuario);
+	 
+	 $count = mysql_num_rows($result);
+	  
+	 if ($count == 1){
+	 echo "<br />". "El correo de Usuario ya Existe en nuestra Base de Datos!" . "<br />";
+	  
+	echo "<a href='index.php'>Escoger otro correo de Usuario</a>";
+	  //print "<script>";
+       //print " self.location='index.php';";
+	   print "</script>";
+	//exit;
+	 }
+	 else{
+	 
+	 $query = "INSERT INTO usuario (nombre,correo,contrasena) VALUES ('$_POST[nombre]', '$_POST[email]', '$contrasena')";
+	 
+	 if (!mysql_query($query, $conexion))
+	 {
+	 die('Error: ' . mysql_error());
+	 echo "Error al crear el usuario." . "<br />";
+	 }
+	 else{
+	 echo "<br />" . "<h2>" . "Usuario Creado Exitosamente!" . "</h2>";
+	 echo "<h4>" . "Bienvenido: " . $_POST['nombre'] . "</h4>";
+	 echo $contrasena;
+	 }
+	 
+	 }
+	 
+	 mysql_close($conexion)
+	 
+	?>
+	<?
+	
+//Desencriptar
+$orden = "SELECT * FROM usuario WHERE contrasena = 1e62df357576d6d53f3dcdca02ce93da";
+$query = mysql_query($orden);
+//Hacemos un bucle para leer todas las filas donde desencriptada sea igual a lo introducido
+while($desencriptacion = mysql_fetch_assoc($query)) {
+echo "La contrase&ntilde;a desencriptada es $desencriptacion[$contrasena]";
+echo $desencriptacion;
+}
+?>
