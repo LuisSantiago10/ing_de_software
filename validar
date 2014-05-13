@@ -1,0 +1,44 @@
+<?php session_start(); ?>
+<?php
+$correo = $_POST['email'];
+$contrasena = md5 ($_POST['contrasena']);
+echo $correo;
+echo "<br><br>";
+echo $contrasena;
+echo "<br><br>";
+$con=mysql_connect("localhost","root")or die("erorconexion".mysql_error());
+mysql_select_db("cargarexcel")or die("errorbase".mysql_error());
+$res=mysql_query("SELECT * FROM usuario WHERE correo='$_POST[email]' and contrasena='$contrasena'",$con);
+echo "este es el valor de res=".$res;
+ while($row=mysql_fetch_array($res))
+{ 
+$id_usuairo=$row[0];
+$nombre1=$row[1];
+}
+echo "<br><br>";
+$fila = mysql_num_rows($res);
+echo "esto es el valor de fila=".$fila;
+echo "<br><br>";
+if ($fila==1){
+$_SESSION['autentificado']="1";
+$_SESSION['id_usuario']= $id_usuairo;
+$_SESSION['user']= $nombre1;
+$_SESSION['email'] = $correo;
+	print "<script>";
+       		print " self.location='envio_correo3.php';";
+          print "</script>";
+		  echo "este es el valor de session=".$_SESSION['autentificado'];
+		   echo "<br>";
+		   echo "este es el valor de session=".$_SESSION['id_usuario'];
+		  echo "<br>";
+		    echo "este es el valor de session user=".$_SESSION['user'];
+			echo "<br>";
+			  echo "este es el valor de session email=".$_SESSION['email'];
+}
+else{
+
+	print "<script>";
+       		print " self.location='iniciosesion.php';";
+          print "</script>";
+}
+?>	
